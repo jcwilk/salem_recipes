@@ -3,5 +3,6 @@ class RecipesController < ApplicationController
   end
 
   def create
+    render text: 'Results!'
   end
 end

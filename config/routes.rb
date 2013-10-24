@@ -1,7 +1,7 @@
 SalemRecipes::Application.routes.draw do
-  resources :recipes, only: [:new]
+  resources :recipes, only: [:index, :show, :create]
 
-  root to: redirect("/recipes/new")
+  root to: redirect("/recipes")
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
