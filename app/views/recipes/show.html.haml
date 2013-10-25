@@ -1,4 +1,7 @@
 = form_tag(recipes_path, method: 'POST') do
-  = select_tag('Meat Shreds', options_for_select(['Deer']))
-  = select_tag('Cabbage', options_for_select(['Red','White']))
+
+  = label_tag('ingredients[Meat Shreds]', 'Meat Shreds')
+  = select_tag('ingredients[Meat Shreds]', options_for_select(['Deer']))
+  = label_tag('ingredients[Cabbage]', 'Cabbage')
+  = select_tag('ingredients[Cabbage]', options_for_select(['Red Cabbage','White Cabbage']))
   = submit_tag('Calculate')

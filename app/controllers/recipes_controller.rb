@@ -3,6 +3,8 @@ class RecipesController < ApplicationController
   end
 
   def create
-    render text: 'Results!'
+    matrix = FoodProduct.new.calculate_matrix(params[:ingredients])
+    display = matrix.to_a.map{|r| r.join(',')}.join("\n")
+    render text: display
   end
 end
